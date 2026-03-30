@@ -1,0 +1,23 @@
+.clicked{
+    color: #AD335A;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 1.3rem */
+}
+
+.unclicked{
+    color: #010101;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 1.3rem */
+}
+
+.header_row{
+    display: flex;
+    flex-direction: row;
+    
+}
