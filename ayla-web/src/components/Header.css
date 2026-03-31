@@ -1,3 +1,13 @@
+.mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 6%;
+}
+
 .clicked{
     color: #AD335A;
 font-family: Poppins;
@@ -8,6 +18,7 @@ line-height: 130%; /* 1.3rem */
 }
 
 .unclicked{
+    /* width: 100%; */
     color: #010101;
 font-family: Poppins;
 font-size: 1rem;
@@ -16,22 +27,33 @@ font-weight: 400;
 line-height: 130%; /* 1.3rem */
 }
 
+.unclicked2{
+    width: 95px;
+       color: #010101;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 1.3rem */
+}
+
 .header_row{
+    margin-top: 10px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 20%;
+    gap: 15%;
     justify-content: center;
     align-items: center;
 
-/* width: 74.1875rem; */
+width: 71rem;
 height: 3.6875rem;
-padding: 0.5625rem 0.6875rem;
+padding: 0.2625rem 0.4875rem;
 
 
     border-radius: 2.5rem;
 border: 2px solid rgba(255, 255, 255, 0.85);
-background: rgba(255, 255, 255, 0.46);
+background: rgba(255, 255, 255, 0.637);
 box-shadow: 10px 20px 20px 0 rgba(148, 145, 140, 0.25);
 backdrop-filter: blur(19.100000381469727px);
 
@@ -66,7 +88,7 @@ li{
     gap: 5px;
 
     height: 1.75rem;
-padding: 0.525rem 0.6rem;
+padding: 0.425rem 0.8rem;
 
     border-radius: 1.25rem;
 border: 1px solid #F5D5E0;
@@ -100,7 +122,6 @@ gap: 0.625rem;
 }
 
 
-/* --- Dropdown Logic --- */
 .dropdown_parent {
     position: relative;
     cursor: pointer;
@@ -131,13 +152,14 @@ gap: 0.625rem;
     font-size: 0.9rem;
     color: #010101;
     list-style: none;
+    font-family: Poppins;
 }
 
 .dropdown_menu li:hover {
     color: #AD335A;
 }
 
-/* --- Language Dropdown --- */
+
 .lang_container {
     position: relative;
     cursor: pointer;
@@ -149,20 +171,20 @@ gap: 0.625rem;
     right: 0;
     background: white;
     border: 1px solid #F5D5E0;
-    border-radius: 10px;
+    border-radius: 20px;
     list-style: none;
-    padding: 5px 0;
+    padding: 10px 0px;
     z-index: 5;
 }
 
-.lang_dropdown:hover{}
+
 
 .lang_dropdown li {
     padding: 5px 15px;
     font-family: Poppins;
 }
 
-/* --- Mobile Responsiveness --- */
+
 .burger {
     display: none;
     cursor: pointer;
@@ -177,38 +199,6 @@ gap: 0.625rem;
     transition: all 0.3s ease;
 }
 
-/* .main_button {
-    background: #AD335A;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.main_button:hover {
-    background: #c23d68; 
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(173, 51, 90, 0.3);
-   
-} */
-
-/* .main_button {
-    background: #AD335A;
-    color: #FFF;
-   
-    transition: transform 0.7s cubic-bezier(0.2, 1, 0.2, 1), 
-                box-shadow 0.7s ease, 
-                background 0.7s ease;
-}
-
-.main_button:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 30px rgba(172, 49, 88, 0.4);
-    background: #c23d68;
-}
-
-.main_button:active {
-    transform: translateY(-1px);
-} */
 
 .main_button {
     position: relative;
@@ -301,5 +291,5 @@ gap: 0.625rem;
 /* Existing styles below... */
 .clicked { color: #AD335A; font-family: Poppins; font-weight: 500; }
 .unclicked { color: #010101; font-family: Poppins; font-weight: 400; }
-.main_button { background: #AD335A; color: white; border-radius: 1.9rem; padding: 0.6rem 1.5rem; cursor: pointer; }
+.main_button { background: #AD335A; color: white; border-radius: 1.9rem; padding: 0.6rem 1.5rem; cursor: pointer;   border: 0.3px solid #ffffff;  }
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+// import 'https://fonts.googleapis.com/css2?family=Aclonica&display=swap';
 import logo from "../assets/ayla logo.svg";
 import vector from "../assets/Vector.svg";
 import arrow from "../assets/arrow.svg";
-// import "./Hero.css";
 import "./Header.css";
 
 const Header = () => {
@@ -11,6 +11,8 @@ const Header = () => {
 
     return (
         <>
+
+        <div className='mid'>
             <div className='header_row'>
                 <img className='logo' src={logo} alt='ayla_logo_Parenting' />
 
@@ -26,7 +28,7 @@ const Header = () => {
                     {/* FIX: Move the dropdown list INSIDE the Contact Us container */}
                     <li className='dropdown_parent'>
                         <div className='header_row2'>
-                            <p className='unclicked'>Contact us</p>
+                            <p className='unclicked2'>Contact us</p>
                             <img src={arrow} alt='arrow_down' />
                         </div>
                         {/* This now sits inside dropdown_parent */}
@@ -44,7 +46,7 @@ const Header = () => {
                         <div className='lang_row'>
                             <img src={vector} alt='vector_language' />
                             <p className='clicked'>En</p>
-                            <img className={isLangOpen ? 'rotate' : ''} src={arrow} alt='arrow_down' />
+                            {/* <img className={isLangOpen ? 'rotate' : ''} src={arrow} alt='arrow_down' /> */}
                         </div>
                         
                         {isLangOpen && (
@@ -63,6 +65,7 @@ const Header = () => {
                         <div className={isMenuOpen ? 'line3 toggle' : 'line3'}></div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );
