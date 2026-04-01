@@ -259,6 +259,10 @@ gap: 0.625rem;
 }
 
 @media screen and (max-width: 1024px) {
+    .logo{
+        width: 15%;
+    }
+
     .nav_links {
         display: none; /* Hide standard menu */
         position: absolute;

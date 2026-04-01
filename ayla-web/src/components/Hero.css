@@ -3,7 +3,7 @@
     position: absolute;
     z-index: -1;
 
-    top: -30px
+    top: -60px
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
@@ -41,5 +41,28 @@ font-size: 1.25rem;
 font-style: normal;
 font-weight: 400;
 line-height: 130%; /* 1.625rem */
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .bgsize{
+        margin-top: 100px
+    }
+    
+.main_f_hero{
+    width: 80%;
+
+margin-top: 190px;
+font-size: 2rem;
+}
+
+.wf{
+    width: 70%;
+font-size: 0.9rem;
+
+}
+
+
 }
 
