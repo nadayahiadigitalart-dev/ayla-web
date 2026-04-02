@@ -15,7 +15,19 @@ import WhyAyla from '../components/whyAyla';
 import Button from '../components/Button';
 // import DiscoverCarousel from '../components/CircularGallery';
 import CircularGallery from '../components/CircularGallery';
-import Discover from '../components/Discover';
+// import Discover from '../components/Discover';
+
+import care from "../assets/4285 6.png";
+import activity from "../assets/4285 8.png";
+import shops from "../assets/4285 1.png";
+
+
+const myGalleryData = [
+  { image: care, text: "Mother Care" },
+  { image: activity, text: "Activities & Kids area" },
+  { image: shops, text: "Shops" }
+
+];
 
 
 
@@ -48,6 +60,9 @@ const Home = () => {
     </div>
 </div>
 
+<div className='discover_bg'>
+
+
 <div className='shop'>
     <div className='shop_col'>
         <p className='mfw'>Make better & faster Shopping decision by visiting ayla store</p>
@@ -60,6 +75,7 @@ const Home = () => {
     alt="3D Product Model showing ux ui soundfix project" 
     auto-rotate 
     camera-controls 
+    camera-orbit="10deg 60deg auto"
     shadow-intensity="2"
     exposure="1.5"
     environment-image="neutral"
@@ -68,30 +84,37 @@ const Home = () => {
     <div slot="poster" className="loading_text">Loading 3D Experience...</div>
     </model-viewer>
 <br></br><br></br>
-<br></br><br></br>
+{/* <br></br><br></br> */}
 
 </div>
 
 
-<div className='discover'>
+{/* </div> */}
 
-<Discover />
-
-</div>
+{/* <CircularGallery /> */}
 
 
 
 
+<div className='discover_section'>
 
-{/* <div style={{ height: '600px', position: 'relative' }}>
+<div style={{ width:'100%', height: '700px', position: 'relative' }}>
   <CircularGallery  textColor="#ffffff"  
-  bend={5}
+  bend={3}
   borderRadius={0.08}
-  scrollSpeed={2}
+  scrollSpeed={1.5}
   scrollEase={0.05}
+  items={myGalleryData}
 />
-</div> */}
+</div>
 
+<div className='discover_col'>
+
+<p className='mfw'>Find everything your family need, in one place.</p>
+<p className='wf1'>From kid-friendly restaurants and activity spaces to workshops and experiences. ayla helps you discover what’s safe, fun, and convenient.</p>
+<Button bu="Discover" />
+
+</div>
 
 
 
@@ -99,6 +122,12 @@ const Home = () => {
 
 
 </div>
+
+
+
+</div>
+</div>
+
     
     
     </>  );

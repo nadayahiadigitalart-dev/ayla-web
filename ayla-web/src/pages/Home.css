@@ -148,7 +148,28 @@ line-height: 130%; /* 1.3rem */
 
 }
 
-.
+.discover_bg{
+       background-image: url('../assets/mid-big-bg.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.discover_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.discover_col{
+    width: 38%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

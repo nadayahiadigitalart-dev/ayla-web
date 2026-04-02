@@ -19,9 +19,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    /* gap: 2000px; */
 }
 
-/* THE ORBIT PATH: All cards rotate around this center point */
+
 .discover_orbit_path {
     position: relative;
     width: 1px;
@@ -30,35 +31,35 @@
 
 .discover_card_node {
     position: absolute;
-    /* This defines the 'Radius' of the arc (how far from the text they orbit) */
-    bottom: 500px; 
-    left: -150px; /* Half of card width to center it */
+
+    /* bottom: 500px;  */
+    bottom: 300px;
+    left: -150px; 
     width: 300px;
+
+    /* margin-left: 400px; */
     
-    /* Origin is the center point (text area) below the card */
-    transform-origin: center 500px; 
-    
-    /* Animation: Right to Left Arc */
-    animation: arcMovement 20s linear infinite;
+    transform-origin: center 700px;    
+    animation: arcMovement 30s linear infinite;
 }
 
-/* STAGGERED DELAYS: Spreads the 5 cards evenly across the arc */
+
 .discover_card_node:nth-child(1) { animation-delay: -4s; }
 .discover_card_node:nth-child(2) { animation-delay: -8s; }
 .discover_card_node:nth-child(3) { animation-delay: -12s; }
 .discover_card_node:nth-child(4) { animation-delay: -16s; }
 .discover_card_node:nth-child(5) { animation-delay: -20s; }
 
-/* THE ACTUAL CARD VISUALS */
+
 .discover_card_content {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* UNIFIED TILT: Every card has the exact same tilt angle */
-    transform: rotateZ(-5deg);
+    transform: rotateZ(-2deg);
     
     /* Counter-rotation to keep card upright while orbiting */
-    animation: stayUpright 20s linear infinite;
+    animation: stayUpright 30s linear infinite;
 }
 
 .discover_image_box {
