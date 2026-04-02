@@ -6,9 +6,16 @@ import Header from '../components/Header';
 import parent from "../assets/parent.svg";
 import G189 from "../assets/Group 189.png";
 
+import '@google/model-viewer';
+import glb from "../assets/baby_bed.glb";
+
+
 import "./Home.css";
 import WhyAyla from '../components/whyAyla';
 import Button from '../components/Button';
+// import DiscoverCarousel from '../components/CircularGallery';
+import CircularGallery from '../components/CircularGallery';
+import Discover from '../components/Discover';
 
 
 
@@ -40,6 +47,54 @@ const Home = () => {
     <Button bu="Explore each stage"/>
     </div>
 </div>
+
+<div className='shop'>
+    <div className='shop_col'>
+        <p className='mfw'>Make better & faster Shopping decision by visiting ayla store</p>
+        <p className='wf1'>Explore our curated collection of baby essentials, mom self-care products, and smart devices recommended for you to make life easier</p>
+        <Button bu="Go to store" />
+    </div>
+
+        <model-viewer 
+    src={glb} 
+    alt="3D Product Model showing ux ui soundfix project" 
+    auto-rotate 
+    camera-controls 
+    shadow-intensity="2"
+    exposure="1.5"
+    environment-image="neutral"
+    
+   style={{ width: "100%", height: "500px" }}>
+    <div slot="poster" className="loading_text">Loading 3D Experience...</div>
+    </model-viewer>
+<br></br><br></br>
+<br></br><br></br>
+
+</div>
+
+
+<div className='discover'>
+
+<Discover />
+
+</div>
+
+
+
+
+
+{/* <div style={{ height: '600px', position: 'relative' }}>
+  <CircularGallery  textColor="#ffffff"  
+  bend={5}
+  borderRadius={0.08}
+  scrollSpeed={2}
+  scrollEase={0.05}
+/>
+</div> */}
+
+
+
+
 
 
 

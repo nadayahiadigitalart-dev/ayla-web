@@ -51,9 +51,10 @@ line-height: 130%; /* 1.625rem */
     }
     
 .main_f_hero{
+    /* margin-top: 160px; */
     width: 80%;
 
-margin-top: 190px;
+margin-top: 290px;
 font-size: 2rem;
 }
 

@@ -1,0 +1,119 @@
+.discover_section {
+    background-color: #a63d60;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Keeps text at the bottom */
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.discover_arc_stage {
+    position: absolute;
+    bottom: 200px; /* Adjust this to sit right above the text */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* THE ORBIT PATH: All cards rotate around this center point */
+.discover_orbit_path {
+    position: relative;
+    width: 1px;
+    height: 1px;
+}
+
+.discover_card_node {
+    position: absolute;
+    /* This defines the 'Radius' of the arc (how far from the text they orbit) */
+    bottom: 500px; 
+    left: -150px; /* Half of card width to center it */
+    width: 300px;
+    
+    /* Origin is the center point (text area) below the card */
+    transform-origin: center 500px; 
+    
+    /* Animation: Right to Left Arc */
+    animation: arcMovement 20s linear infinite;
+}
+
+/* STAGGERED DELAYS: Spreads the 5 cards evenly across the arc */
+.discover_card_node:nth-child(1) { animation-delay: -4s; }
+.discover_card_node:nth-child(2) { animation-delay: -8s; }
+.discover_card_node:nth-child(3) { animation-delay: -12s; }
+.discover_card_node:nth-child(4) { animation-delay: -16s; }
+.discover_card_node:nth-child(5) { animation-delay: -20s; }
+
+/* THE ACTUAL CARD VISUALS */
+.discover_card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* UNIFIED TILT: Every card has the exact same tilt angle */
+    transform: rotateZ(-5deg);
+    
+    /* Counter-rotation to keep card upright while orbiting */
+    animation: stayUpright 20s linear infinite;
+}
+
+.discover_image_box {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border: 10px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.discover_image_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discover_label {
+    margin-top: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+/* THE TEXT CONTENT */
+.discover_text_area {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.discover_main_title { font-size: 2.8rem; margin-bottom: 15px; }
+.discover_cta {
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* ANIMATIONS */
+
+/* Moves the node from right (+90deg) to left (-90deg) */
+@keyframes arcMovement {
+    0% { transform: rotate(100deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: rotate(-100deg); opacity: 0; }
+}
+
+/* Keeps the image upright so it doesn't turn upside down */
+@keyframes stayUpright {
+    0% { transform: rotate(-100deg) rotateZ(-5deg); }
+    100% { transform: rotate(100deg) rotateZ(-5deg); }
+}
