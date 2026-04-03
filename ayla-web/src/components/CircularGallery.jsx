@@ -21,6 +21,7 @@ function lerp(p1, p2, t) {
 
 function autoBind(instance) {
   const proto = Object.getPrototypeOf(instance);
+  if (!proto) return;
   Object.getOwnPropertyNames(proto).forEach(key => {
     if (key !== 'constructor' && typeof instance[key] === 'function') {
       instance[key] = instance[key].bind(instance);
@@ -183,7 +184,6 @@ class Media {
           
           float d = roundedBoxSDF(vUv - 0.5, vec2(0.5 - uBorderRadius), uBorderRadius);
           
-          // Smooth antialiasing for edges
           float edgeSmooth = 0.002;
           float alpha = 1.0 - smoothstep(-edgeSmooth, edgeSmooth, d);
           
@@ -222,7 +222,7 @@ class Media {
       renderer: this.renderer,
       text: this.text,
       textColor: this.textColor,
-      fontFamily: this.font
+      font: this.font
     });
   }
   update(scroll, direction) {
@@ -298,11 +298,15 @@ class App {
       scrollEase = 0.05
     } = {}
   ) {
+    // --- CRITICAL FIX: CONSTRUCTOR GUARD ---
+    if (!container) return; 
+
     document.documentElement.classList.remove('no-js');
     this.container = container;
     this.scrollSpeed = scrollSpeed;
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
     this.onCheckDebounce = debounce(this.onCheck, 200);
+    
     this.createRenderer();
     this.createCamera();
     this.createScene();
@@ -320,7 +324,11 @@ class App {
     });
     this.gl = this.renderer.gl;
     this.gl.clearColor(0, 0, 0, 0);
-    this.container.appendChild(this.gl.canvas);
+    
+    // Safety check before appending
+    if (this.container) {
+      this.container.appendChild(this.gl.canvas);
+    }
   }
   createCamera() {
     this.camera = new Camera(this.gl);
@@ -340,16 +348,7 @@ class App {
     const defaultItems = [
       { image: care, text: 'Mother Care Product' },
       { image: activity, text: 'Activities & Kids Area' },
-      { image: shops, text: 'Shops' },
-      { image: care, text: 'Strawberries' },
-      { image: shops, text: 'Deep Diving' },
-      // { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-      // { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-      // { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-      // { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-      // { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-      // { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-      // { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
+      { image: shops, text: 'Shops' }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
@@ -400,6 +399,7 @@ class App {
     this.scroll.target = this.scroll.target < 0 ? -item : item;
   }
   onResize() {
+    if (!this.container) return;
     this.screen = {
       width: this.container.clientWidth,
       height: this.container.clientHeight
@@ -433,7 +433,6 @@ class App {
     this.boundOnTouchMove = this.onTouchMove.bind(this);
     this.boundOnTouchUp = this.onTouchUp.bind(this);
     window.addEventListener('resize', this.boundOnResize);
-    window.addEventListener('mousewheel', this.boundOnWheel);
     window.addEventListener('wheel', this.boundOnWheel);
     window.addEventListener('mousedown', this.boundOnTouchDown);
     window.addEventListener('mousemove', this.boundOnTouchMove);
@@ -445,7 +444,6 @@ class App {
   destroy() {
     window.cancelAnimationFrame(this.raf);
     window.removeEventListener('resize', this.boundOnResize);
-    window.removeEventListener('mousewheel', this.boundOnWheel);
     window.removeEventListener('wheel', this.boundOnWheel);
     window.removeEventListener('mousedown', this.boundOnTouchDown);
     window.removeEventListener('mousemove', this.boundOnTouchMove);
@@ -469,11 +467,27 @@ export default function CircularGallery({
   scrollEase = 0.05
 }) {
   const containerRef = useRef(null);
+
   useEffect(() => {
-    const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+    // Check if the ref is ready
+    if (!containerRef.current) return;
+
+    const app = new App(containerRef.current, { 
+      items, 
+      bend, 
+      textColor, 
+      borderRadius, 
+      font, 
+      scrollSpeed, 
+      scrollEase 
+    });
+
     return () => {
-      app.destroy();
+      if (app && typeof app.destroy === 'function') {
+        app.destroy();
+      }
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
-  return <div className="circular-gallery" ref={containerRef} />;
+
+  return <div className="circular-gallery" ref={containerRef} style={{ width: '100%', height: '600px', position: 'relative' }} />;
 }

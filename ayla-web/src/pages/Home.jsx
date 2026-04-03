@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+
+import React, { useRef, useEffect, useState } from 'react';
+
 import Hero from '../components/Hero';
 import Header from '../components/Header';
 // import bg from "../assets/bg-img.svg";
@@ -7,7 +10,7 @@ import parent from "../assets/parent.svg";
 import G189 from "../assets/Group 189.png";
 
 import '@google/model-viewer';
-import glb from "../assets/baby_bed.glb";
+import glb from "../components/baby_bed.glb";
 
 
 import "./Home.css";
@@ -21,6 +24,15 @@ import care from "../assets/4285 6.png";
 import activity from "../assets/4285 8.png";
 import shops from "../assets/4285 1.png";
 
+import img1 from '../assets/10918 1.svg'; 
+import img2 from '../assets/10918 1-1.svg';
+import img3 from '../assets/10918 1-2.svg';
+import img4 from '../assets/10918 1-1.svg';
+import StoryCard from '../components/StoryCard';
+import PureCSSGallery from '../components/PureCSSGallery';
+
+
+
 
 const myGalleryData = [
   { image: care, text: "Mother Care" },
@@ -31,7 +43,25 @@ const myGalleryData = [
 
 
 
+
+
 const Home = () => {
+   const modelRef = useRef(null);
+    // 1. Add a "ready" state
+    const [isReady, setIsReady] = useState(false);
+
+    useEffect(() => {
+        // 2. Set to true only after the first render
+        setIsReady(true);
+        
+        const modelViewer = modelRef.current;
+        if (modelViewer) {
+            modelViewer.addEventListener('load', () => {
+                console.log("3D Model is ready!");
+            });
+        }
+    }, []);
+
     return (<>
 
     <div className='bg'>
@@ -70,7 +100,8 @@ const Home = () => {
         <Button bu="Go to store" />
     </div>
 
-        <model-viewer 
+        {/* <model-viewer 
+        id="main-3d-model"
     src={glb} 
     alt="3D Product Model showing ux ui soundfix project" 
     auto-rotate 
@@ -82,9 +113,24 @@ const Home = () => {
     
    style={{ width: "100%", height: "500px" }}>
     <div slot="poster" className="loading_text">Loading 3D Experience...</div>
-    </model-viewer>
+    </model-viewer> */}
+    <model-viewer 
+    id="main-3d-model"
+    ref={modelRef}
+    loading="lazy"
+    src={glb} 
+    alt="3D Product Model" 
+    auto-rotate 
+    // camera-controls 
+    // camera-orbit="10deg 60deg auto"
+    shadow-intensity="2"
+    exposure="1.5"
+    environment-image="neutral"
+    style={{ width: "100%", height: "500px", display: 'block' }} 
+>
+    <div slot="poster" className="loading_text">Loading 3D Experience...</div>
+</model-viewer>
 <br></br><br></br>
-{/* <br></br><br></br> */}
 
 </div>
 
@@ -96,9 +142,9 @@ const Home = () => {
 
 
 
-<div className='discover_section'>
+<div className='discover_section' >
 
-<div style={{ width:'100%', height: '700px', position: 'relative' }}>
+{/* <div style={{ width:'100%', height: '600px', position: 'relative' }}>
   <CircularGallery  textColor="#ffffff"  
   bend={3}
   borderRadius={0.08}
@@ -106,7 +152,14 @@ const Home = () => {
   scrollEase={0.05}
   items={myGalleryData}
 />
-</div>
+</div> */}
+
+<div className='discover_section'>
+  <div style={{ width:'100%', height: '600px', overflow: 'hidden' }}>
+     <PureCSSGallery />
+  </div>
+
+
 
 <div className='discover_col'>
 
@@ -115,7 +168,83 @@ const Home = () => {
 <Button bu="Discover" />
 
 </div>
+</div>
 
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+
+<div className='stories'>
+    <div className="story_col1">
+           <div className='story_title'>
+                <h1 className="mfw">ayla stories</h1>
+                <p className="wf1">
+                    Because every mother carries a story & every story deserves space.
+                </p>
+            </div>
+           
+              
+                <StoryCard 
+                    img={img1} 
+                    date="20 Feb, 2026" 
+                    title="Family Balance" 
+                    par="Creating harmony between care, work, and life." 
+                    // shiftDirection="shift-top-left"
+                />
+                <StoryCard 
+                    img={img2} 
+                    date="4 Feb, 2026" 
+                    title="Ayla expands its caregiver community" 
+                    par="We're growing our trusted care network to support more..." 
+                    // shiftDirection="shift-top-right"
+                />
+
+
+    </div>
+
+    <div className='story_col2'>            
+                <StoryCard 
+                    img={img3} 
+                    date="7 Jan, 2026" 
+                    title="New live connection feature" 
+                    par="Mothers can now go live with their children anytime..." 
+                    // shiftDirection="shift-bottom-left"
+                />
+                <StoryCard 
+                    img={img4}
+                    date="28 Dec, 2025" 
+                    title="Family Balance" 
+                    par="Creating harmony between care, work, and life." 
+                    // shiftDirection="shift-bottom-right"
+                />
+        
+
+            {/* <button className="stories_global_btn">See more</button> */}
+            <Button bu="See more"/>
+        </div>
+</div>
+
+{/* <br></br>
+<br></br> */}
+
+<section className='caregiver_section'>
+    {/* <img src={} alt='ayla_illustration' /> */}
+    <div className='caregiver_col'>
+        <p className='mf'>Looking for trusted care?</p>
+        <p className='f'>
+            Finding the right care for your child and home 
+            shouldn’t feel stressful.With Ayla, you can 
+            connect with verified babysitters and 
+            housekeepers you can trust.
+        </p>
+        <Button bu="Request a Caregiver"/>
+    </div>
+</section>
 
 
 

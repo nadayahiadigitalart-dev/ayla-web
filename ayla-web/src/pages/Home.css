@@ -160,6 +160,7 @@ line-height: 130%; /* 1.3rem */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .discover_col{
@@ -169,7 +170,46 @@ line-height: 130%; /* 1.3rem */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    z-index: 2;
 }
+
+
+.stories{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 500px;
+}
+
+.story_title{
+    width: 70%;
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.story_col1{
+     display: flex;
+     gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.story_col2{
+     display: flex;
+     gap: 20px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
 
 

@@ -3,6 +3,7 @@
   height: 100%;
   overflow: hidden;
   cursor: grab;
+  display: block
 }
 
 .circular-gallery:active {

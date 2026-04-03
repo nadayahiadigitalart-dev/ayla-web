@@ -1,0 +1,91 @@
+/* .storycard{
+        display: flex;
+
+
+padding: 0.625rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+align-self: stretch;
+
+border-radius: 1.5rem;
+border: 1px solid #FFF;
+background: #F4D1DD;
+box-shadow: 0 4px 15.6px 0 rgba(0, 0, 0, 0.25);
+} */
+
+.storycard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+
+  /* This allows the card to grow/shrink based on its container */
+  width: 100%; 
+  max-width: 500px; /* Optional: keeps cards from getting too huge on desktop */
+  
+  padding: 0.625rem;
+  border-radius: 1.5rem;
+  border: 1px solid #FFF;
+  background: #F4D1DD;
+  box-shadow: 0 4px 15.6px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden; /* Keeps the image corners from poking out */
+}
+
+.storycard img {
+  width: 100%;          /* Forces image to match card width */
+  height: 200px;        /* Set a fixed height for consistency */
+  object-fit: cover;    /* Crops image to fill the area without stretching */
+  border-radius: 1rem;  /* Optional: rounds the image corners inside the card */
+  display: block;
+}
+
+.card_col {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* 
+.card_col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+} */
+
+.pink_small{
+    margin: 0px;
+    color: #AD335A;
+font-family: Poppins;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 0.975rem */
+}
+
+.title{
+    margin: 0px;
+
+    color: #000;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 1.625rem */
+}
+
+.par{
+    margin: 0px;
+
+    color: #000;
+font-family: Poppins;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 1.1375rem */
+}
