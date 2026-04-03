@@ -5,9 +5,18 @@ import vector from "../assets/Vector.svg";
 import arrow from "../assets/arrow.svg";
 import "./Header.css";
 
+import { useNavigate } from 'react-router-dom';
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleLanguageChange = (path) => {
+        navigate(path); // 3. Function to change the URL
+        setIsLangOpen(false); // Close dropdown after selection
+    };
 
     return (
         <>
@@ -51,10 +60,11 @@ const Header = () => {
                         
                         {isLangOpen && (
                             <ul className='lang_dropdown'>
-                                <li>Arabic</li>
-                                <li>English</li>
-                            </ul>
-                        )}
+                              {/* 4. Add onClick to the list items */}
+                    <li onClick={() => handleLanguageChange('/ar')}>Arabic</li>
+                    <li onClick={() => handleLanguageChange('/')}>English</li>
+                </ul>
+            )}
                     </div>
 
                     <p className='main_button'>Sign up</p>

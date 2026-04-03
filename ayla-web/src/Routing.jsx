@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home';
+import HomeAR from './pages/HomeAR';
 
 // import Contact from './components/Contact';
 
@@ -11,7 +12,7 @@ import Home from './pages/Home';
         <Routes>
             <Route path='/' element={<Home />} />
             {/* <Route path='/projectdetails' element={<Projectdetails />} /> */}
-           
+           <Route path="/ar" element={<HomeAR />} />
 
 
             {/* <Route path='*' element={<Error />} /> */}

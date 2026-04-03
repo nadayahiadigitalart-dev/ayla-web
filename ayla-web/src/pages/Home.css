@@ -437,7 +437,38 @@ box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
 }
 
 
+/* ////// */
 
+.lang_container {
+    position: relative;
+    cursor: pointer;
+}
+
+.lang_dropdown {
+    position: absolute;
+    top: 100%; /* Sits right under the "En" */
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 100px;
+    z-index: 1000; /* Ensures it stays above the Hero section */
+}
+
+.lang_option {
+    padding: 8px;
+    color: #AD335A;
+    font-weight: 500;
+    border-radius: 8px;
+    /* transition: background 0.2s; */
+}
+
+.lang_option:hover {
+    background: #F4D1DD; /* Soft pink hover */
+}
+
+/* //// */
 
 
 
