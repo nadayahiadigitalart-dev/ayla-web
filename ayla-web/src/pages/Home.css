@@ -21,6 +21,9 @@ body{
     top: 0px; */
 
    background-image: url('../assets/bg1-img.svg');
+    /* background-image: url('../assets/Group\ 192.svg'); */
+   background-repeat: no-repeat;
+   background-size: cover;
    background-repeat: no-repeat;
    background-size: cover;
    /* margin-bottom: 70px; */
@@ -149,7 +152,11 @@ line-height: 130%; /* 1.3rem */
 }
 
 .discover_bg{
-       background-image: url('../assets/mid-big-bg.svg');
+    width: 100%;
+    height: 2300px;
+       /* background-image: url('../assets/mid-big-bg.svg'); */
+    background-image: url('../assets/Group\ 192.svg');
+
    background-repeat: no-repeat;
    background-size: cover;
 }
@@ -180,7 +187,7 @@ line-height: 130%; /* 1.3rem */
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 500px;
+    margin-bottom: 50px;
 }
 
 .story_title{
@@ -208,6 +215,108 @@ line-height: 130%; /* 1.3rem */
     justify-content: center;
 }
 
+.caregiver_section{
+    display: flex;
+    flex-direction: column;
+    gap:5px ;
+    align-items: center;
+    justify-content: center;
+
+    /* float: left; */
+    /* position: relative; */
+    left: 0px;
+
+     /* background-image: url('../assets/careg.png'); */
+   /* background-repeat: no-repeat;
+   background-size: cover; */
+}
+
+.tt{
+    /* position: absolute;
+    z-index: 1; */
+
+    margin-left: 100px;
+}
+
+.tt2{
+    width: 100%;
+       position: absolute;
+    z-index: -1;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    /* top: 1px; */
+    /* bottom: 1px; */
+    /* margin-bottom: 300px; */
+}
+
+.caregiver_row{
+    width: 100%;
+      display: flex;
+    flex-direction: row;
+    gap:5px ;
+    align-items: center;
+    /* justify-content: center; */
+
+    /* float: left; */
+    position: relative;
+    left: 0px;
+
+}
+
+.caregiver_col{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-right: 100px;
+    margin-top: 300px;
+      /* background-image: url('../assets/illu.png');
+   background-repeat: no-repeat;
+   background-size: cover; */
+}
+
+.illu{
+    position: relative;
+    left: 0px;
+    float: left;
+}
+
+.trust_section{
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 10px;
+}
+
+.tc{
+    display: flex;
+width: 18.6875rem;
+padding: 1.25rem 0;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 0.8125rem;
+
+/* display: flex;
+width: 21.625rem;
+height: 9.1875rem;
+padding: 0.5rem;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 0.625rem; */
+
+border-radius: 1.25rem;
+border: 1px solid #FFF;
+background: #FFECF2;
+box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
+}
+
 
 
 
@@ -217,6 +326,8 @@ line-height: 130%; /* 1.3rem */
 @media screen and (max-width: 900px) {
     .absolute_bg{
     background-image: url('../assets/mob-bg-img.svg');
+        /* background-image: url('../assets/Group\ 195.svg'); */
+
    background-repeat: no-repeat;
    background-size: cover;
    

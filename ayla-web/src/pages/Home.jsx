@@ -23,6 +23,8 @@ import CircularGallery from '../components/CircularGallery';
 import care from "../assets/4285 6.png";
 import activity from "../assets/4285 8.png";
 import shops from "../assets/4285 1.png";
+import illu from "../assets/illu.png";
+
 
 import img1 from '../assets/10918 1.svg'; 
 import img2 from '../assets/10918 1-1.svg';
@@ -30,6 +32,16 @@ import img3 from '../assets/10918 1-2.svg';
 import img4 from '../assets/10918 1-1.svg';
 import StoryCard from '../components/StoryCard';
 import PureCSSGallery from '../components/PureCSSGallery';
+
+import tc1 from '../assets/trusticon-1.svg'; 
+import tc2 from '../assets/trusticon-2.svg'; 
+import tc3 from '../assets/trusticon-3.svg'; 
+import G193 from '../assets/Group 193.png'; 
+import careg from '../assets/careg3.png'; 
+import ppl from '../assets/ppl.png'; 
+
+
+
 
 
 
@@ -40,8 +52,6 @@ const myGalleryData = [
   { image: shops, text: "Shops" }
 
 ];
-
-
 
 
 
@@ -78,6 +88,12 @@ const Home = () => {
     <Hero />
 
 <WhyAyla />
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
 </div>
 
 <div className='parenting'>
@@ -140,8 +156,6 @@ const Home = () => {
 {/* <CircularGallery /> */}
 
 
-
-
 <div className='discover_section' >
 
 {/* <div style={{ width:'100%', height: '600px', position: 'relative' }}>
@@ -172,10 +186,7 @@ const Home = () => {
 
 <br></br>
 <br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
 
 
 
@@ -204,7 +215,6 @@ const Home = () => {
                     // shiftDirection="shift-top-right"
                 />
 
-
     </div>
 
     <div className='story_col2'>            
@@ -232,8 +242,14 @@ const Home = () => {
 {/* <br></br>
 <br></br> */}
 
+        </div>
 <section className='caregiver_section'>
-    {/* <img src={} alt='ayla_illustration' /> */}
+
+    <div className='caregiver_row'>
+    <img className='tt2' src={careg} alt='ayla_trusted_caregiver_img_bg' />
+
+    <img className='illus' style={{position: 'relative',
+    left: 0,float: 'left', marginBottom: '100'}} src={illu} alt='ayla_illustration' />
     <div className='caregiver_col'>
         <p className='mf'>Looking for trusted care?</p>
         <p className='f'>
@@ -244,17 +260,61 @@ const Home = () => {
         </p>
         <Button bu="Request a Caregiver"/>
     </div>
+    {/* <img className='tt' src={G193} alt='ayla_trusted_caregiver_img' /> */}
+
+    </div>
+
+    <div className='trust_section'>
+        <div className='tc'>
+            <img src={tc1} alt='icon'/>
+            <p className='f'>Verified Profile</p>
+        </div>
+
+        <div className='tc'>
+            <img src={tc2} alt='icon'/>
+            <p className='f'>Verified Profile</p>
+        </div>
+
+        <div className='tc'>
+            <img src={tc3} alt='icon'/>
+            <p className='f'>Verified Profile</p>
+        </div>
+    </div>
+
+
 </section>
 
 
+<section className='wt_ppl_say'>
+
+    <img className='ppl_say' src={ppl} alt='what people say about ayla' />
+
+    <div className='ppl_col'>
+        <p className='mf'>What other People say?</p>
+        <div className='ppl_box_row'>
+            <img className='' src='' alt=''/>
+            <p className='f'>“This app made my life easier, it has features that helps me in”<br></br>
+            ~Huda Abdelsalam</p>
+        </div>
+
+        <div className='ppl_buttons'>
+
+        </div>
+    </div>
 
 
 
+</section>
 </div>
 
 
 
-</div>
+
+
+
+
+
+
 </div>
 
     
