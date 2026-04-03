@@ -39,8 +39,29 @@ import tc3 from '../assets/trusticon-3.svg';
 import G193 from '../assets/Group 193.png'; 
 import careg from '../assets/careg3.png'; 
 import ppl from '../assets/ppl.png'; 
+import huda from '../assets/huda2.png'; 
+import huda2 from '../assets/huda.png'; 
+
+import im1 from '../assets/im1.svg'; 
+import im2 from '../assets/im2.svg'; 
+import Footer from '../components/Footer';
 
 
+
+
+
+const testimonials = [
+  {
+    img: huda,
+    text: "“I love how Ayla helps me understand my child's development!”",
+    author: "~Huda Abdelsalam"
+  },
+  {
+    img: huda2,
+    text: "“The Caregivers section in app is really good, I feel secure now knowing each detail happen with my kids”",
+    author: "~Sarah Ahmed"
+  }
+];
 
 
 
@@ -56,6 +77,21 @@ const myGalleryData = [
 
 
 const Home = () => {
+
+    
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const current = testimonials[currentIndex];
+
+
    const modelRef = useRef(null);
     // 1. Add a "ready" state
     const [isReady, setIsReady] = useState(false);
@@ -290,32 +326,52 @@ const Home = () => {
     <img className='ppl_say' src={ppl} alt='what people say about ayla' />
 
     <div className='ppl_col'>
-        <p className='mf'>What other People say?</p>
-        <div className='ppl_box_row'>
-            <img className='' src='' alt=''/>
-            <p className='f'>“This app made my life easier, it has features that helps me in”<br></br>
-            ~Huda Abdelsalam</p>
+      <p className='mf'>What other People say?</p>
+      
+      {/* The Dynamic Box */}
+      <div className='ppl_box_row'>
+        <div className="ppl_img_container">
+           <img className='ppl_img' src={current.img} alt={current.author}/>
         </div>
-
-        <div className='ppl_buttons'>
-
+        <div className="ppl_text_content">
+           <p className='f'>{current.text}</p>
+           <p className='f'>{current.author}</p>
         </div>
+      </div>
+
+      {/* The Buttons */}
+      <div className='ppl_buttons'>
+        <button className='ppl_btn' onClick={prevTestimonial}>‹</button>
+        <button className='ppl_btn' onClick={nextTestimonial}>›</button>
+      </div>
     </div>
 
 
 
 </section>
 </div>
-
-
-
-
-
-
-
-
+<br></br>
 
 </div>
+
+<section className='community'>
+    <img className='im1' src={im1} alt=''/>
+    <div className='community_col' >
+        <p className='mf' >Join our Community</p>
+        <p className='f'>Connect with other mothers and share stories and experiences together.</p>
+        <Button bu="Join" />
+    </div>
+    <img className='im2' src={im2} alt=''/>
+
+</section>
+
+<Footer/>
+
+
+
+
+
+
 
     
     

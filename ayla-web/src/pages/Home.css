@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    height: 3000vh;
+    height: 980vh;
     overflow-x: hidden;
 }
 
@@ -317,6 +317,121 @@ background: #FFECF2;
 box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
 }
 
+.wt_ppl_say{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 230px;
+
+}
+
+.ppl_say{
+    position: absolute;
+    z-index: -1;
+}
+
+.ppl_col{
+    margin-left: 500px;
+}
+
+/* /////////////////// */
+
+.ppl_box_row {
+  background:#fce4ec;
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  width: 500px;
+  height: 8.9375rem;
+  /* max-width: 500px; */
+  margin-top: 20px;
+}
+
+.ppl_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ppl_buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-end; /* Moves buttons to the right like your image */
+}
+
+.ppl_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #AD335A; /* Your berry color */
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.ppl_btn:hover {
+  opacity: 0.8;
+}
+
+.ppl_text_content{
+    width: 60%;
+}
+
+/* ////////// */
+
+
+.community{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    /* top: 600px; */
+
+    margin-top: 1500px;
+}
+
+.im1{
+    /* float: left; */
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    margin-bottom: 300px;
+}
+
+.im2{
+    /* float: right; */
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+
+    margin-top: 100px;
+}
+
+.community_col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 20%;
+
+    /* margin-top: 100px; */
+    margin-left:100px;
+}
 
 
 
