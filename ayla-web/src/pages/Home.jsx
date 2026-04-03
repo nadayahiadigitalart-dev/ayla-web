@@ -284,8 +284,7 @@ const Home = () => {
     <div className='caregiver_row'>
     <img className='tt2' src={careg} alt='ayla_trusted_caregiver_img_bg' />
 
-    <img className='illus' style={{position: 'relative',
-    left: 0,float: 'left', marginBottom: '100'}} src={illu} alt='ayla_illustration' />
+    <img className='illu'  src={illu} alt='ayla_illustration' />
     <div className='caregiver_col'>
         <p className='mf'>Looking for trusted care?</p>
         <p className='f'>

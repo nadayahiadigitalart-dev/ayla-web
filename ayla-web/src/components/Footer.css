@@ -196,3 +196,40 @@ margin: 0px;
 .link-group ul { list-style: none; padding: 0; }
 .link-group li { margin-bottom: 8px; opacity: 0.8; font-size: 0.9rem; cursor: pointer; }
 .link-group li:hover { opacity: 1; } */
+
+
+
+@media screen and (max-width: 900px) {
+
+    .footer-main{
+        width: 100%;
+        /* margin-top: 500px; */
+        flex-direction: column;
+
+        height: 800px;
+        gap: 5%;
+    }
+
+    .col_footer{
+        flex-direction: row;
+    }
+
+    .footer_top_row{
+        flex-direction: column;
+    }
+
+    .footerlinks{
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .footer-brand{
+        margin-top: 30px;
+    }
+    .phone-mockup{
+        display: none;
+    }
+
+
+
+}
