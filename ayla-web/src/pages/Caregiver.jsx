@@ -1,4 +1,6 @@
-import React, { PureComponent } from 'react';
+// import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
+
 import Button from '../components/Button';
 // import caree from '../assets/care_bg.svg';
 import caree from '../assets/Group 201.png';
@@ -22,6 +24,9 @@ import ic4 from '../assets/emotion-happy-fill.svg';
 
 import cimg from '../assets/cimg.png';
 
+import { Supabase } from '../Supabase';
+
+
 
 
 
@@ -32,10 +37,16 @@ import cimg from '../assets/cimg.png';
 
 
 const Caregiver = () => {
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [service, setService] = useState("");
+    const [nationality, setNationality] = useState("");
+    const [message, setMessage] = useState("");
 
         async function sendMsg() {
   const { data, error } = await Supabase
-    .from("Caregiver responses")
+    .from("caregiver_responses")
     .insert([
       {
         // sender_name: sender_name,
@@ -43,20 +54,38 @@ const Caregiver = () => {
         // subject: sub,
         // message: msg,
 
-        "Namee":Name, "phone_number":phone_number,
-        "email": email, "email": email, "services_needed":services_needed,
-         "nationality": nationality, "message": message,
+        "Name": name,           
+        "email": email,           
+        "services_needed": service,
+        "nationality": nationality, 
+        "message": message,        
+        "phone_number": phone
       }
     ]);
 
-  if (error) {
-    console.error("Supabase error:", error);
-    alert("Message failed ❌");
+//   if (error) {
+//     console.error("Supabase error:", error);
+//     alert("Message failed ❌");
+//   } else {
+//     console.log("Inserted data:", data);
+//     alert("Message sent successfully ✅");
+//   }
+// }
+
+
+if (error) {
+    console.error("Supabase error:", error.message);
+    alert(`Error: ${error.message}`); // This will tell you if a column is missing
   } else {
-    console.log("Inserted data:", data);
     alert("Message sent successfully ✅");
-  }
-}
+    // Clear form
+    setName("");
+    setEmail("");
+    setPhone("");
+    setService("");
+    setNationality("");
+    setMessage("");
+  }}
 
 
 
@@ -187,8 +216,50 @@ reliable and trusted support.</p>
             </div>
         <form className='form'>
 <div className='care_form_col'>
-            <p className='fff'>Name</p>
-        <input className='ayla_css' onChange={(i)=>{Name(i.target.value)}} type='text' />
+<div className='care_form_row'>
+    
+        <p className='fff'>Name</p>
+        <input className='ayla_css' 
+        value={name} 
+        onChange={(e) => setName(e.target.value)}s
+         type='text' 
+         
+         />
+
+         <input 
+    className='ayla_css' 
+    type='text' 
+    value={phone} 
+    onChange={(e) => setPhone(e.target.value)} 
+/>
+
+
+<p className='fff'>Email</p>
+<input 
+    className='ayla_css' 
+    type='email' 
+    value={email} 
+    onChange={(e) => setEmail(e.target.value)} 
+/>
+
+
+<p className='fff'>Service Needed</p>
+<input 
+    className='ayla_css' 
+    type='text' 
+    value={service} 
+    onChange={(e) => setService(e.target.value)} 
+/>
+
+
+
+        {/* <input 
+                className='ayla_css' 
+                type='text' 
+                value={name}
+                onChange={(e) => setName(e.target.value)} 
+            />  */}
+</div>
 
             {/* <input className='ayla_css'></input> */}
 </div>
