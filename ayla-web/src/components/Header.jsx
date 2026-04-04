@@ -5,18 +5,30 @@ import vector from "../assets/Vector.svg";
 import arrow from "../assets/arrow.svg";
 import "./Header.css";
 
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
 
     const navigate = useNavigate();
+    const location = useLocation(); // 2. DEFINE LOCATION HERE (This fixes the error)
 
     const handleLanguageChange = (path) => {
-        navigate(path); // 3. Function to change the URL
-        setIsLangOpen(false); // Close dropdown after selection
+        // Prevent navigating if we are already on that path
+        if (location.pathname === path) {
+            setIsLangOpen(false);
+            return;
+        }
+        navigate(path);
+        setIsLangOpen(false);
     };
+
+    // Determine if we are currently on the Arabic page to change the label
+    const isArabic = location.pathname === '/ar';
 
     return (
         <>
@@ -44,7 +56,11 @@ const Header = () => {
                         <ul className='dropdown_menu'>
                             <li>Careers</li>
                             <li>How it works</li>
+<Link to="/caregiver-services" style={{ textDecoration: "none", color: "inherit" }}>
+
                             <li>Request a caregiver</li>
+</Link>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -82,3 +98,5 @@ const Header = () => {
 }
 
 export default Header;
+
+

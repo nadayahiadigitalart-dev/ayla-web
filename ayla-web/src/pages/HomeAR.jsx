@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import G189 from "../assets/Group 189.png";
 import '@google/model-viewer';
 import glb from "../components/baby_bed.glb";
-import "./Home.css"; // Ensure your CSS uses logical properties
+import "./HAR.css"; 
 import WhyAyla from '../components/whyAyla';
 import Button from '../components/Button';
 import PureCSSGallery from '../components/PureCSSGallery';
@@ -84,7 +84,7 @@ const HomeAR = () => {
 
       <div className='discover_bg'>
         <div className='shop'>
-          <div className='shop_col'>
+          <div className='shop_coll'>
             <p className='mfw'>اتخذي قرارات تسوق أفضل وأسرع بزيارة متجر آيلا</p>
             <p className='wf1'>استكشفي مجموعتنا المختارة من أساسيات الطفل، منتجات العناية بالأم، والأجهزة الذكية المرشحة لكِ لتجعل حياتكِ أسهل.</p>
             <Button bu="اذهبي للمتجر" />
@@ -118,7 +118,7 @@ const HomeAR = () => {
           </div>
         </div>
 
-        <div className='stories'>
+        <div className='storiess'>
           <div className="story_col1">
              <div className='story_title'>
                 <h1 className="mfw">قصص آيلا</h1>
@@ -158,8 +158,8 @@ const HomeAR = () => {
 
       <section className='caregiver_section'>
         <div className='caregiver_row'>
-          <img className='tt2' src={careg} alt='خلفية مقدمي الرعاية' />
-          <img className='illu' src={illu} alt='توضيح آيلا' />
+          <img className='tt22' src={careg} alt='خلفية مقدمي الرعاية' />
+          <img className='illus' src={illu} alt='توضيح آيلا' />
           <div className='caregiver_col'>
             <p className='mf'>هل تبحثين عن رعاية موثوقة؟</p>
             <p className='f'>

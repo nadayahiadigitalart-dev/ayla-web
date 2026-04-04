@@ -1,0 +1,43 @@
+.car{
+position: relative;
+width: 100%;
+}
+
+.c{
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    /* transform: scalex(-1); */
+}
+
+.car_col{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 140px;
+    margin-left: 160px;
+}
+
+.mfb{
+    color: #5A5A74;
+font-family: Aclonica;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+margin: 0px;
+line-height: 130%; /* 3.25rem */
+}
+
+.bf{
+margin: 0px;
+
+    color: #000;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 1.3rem */
+}
+
