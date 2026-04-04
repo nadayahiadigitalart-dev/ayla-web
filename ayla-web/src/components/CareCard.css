@@ -1,0 +1,40 @@
+.card{
+    display: flex;
+width: 22.4875rem;
+/* height: 28.0625rem; */
+padding: 1.25rem;
+
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 0.325rem;
+
+border-radius: 1.7rem;
+border: 1px solid #FFF;
+background: linear-gradient(180deg, #DE91A9 0%, #FFD3E2 62.3%);
+box-shadow: 6px 4px 30.7px 0 rgba(0, 0, 0, 0.20);
+}
+
+.pf{
+    color: var(--main-color, #AD335A);
+text-align: center;
+
+/* semibold small titles */
+font-family: Poppins;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 1.95rem */
+margin: 5px;
+}
+
+.ff{
+    color: #292929;
+text-align: center;
+font-family: Poppins;
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 1.21875rem */
+margin: 0px;
+}

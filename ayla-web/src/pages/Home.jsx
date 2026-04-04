@@ -166,7 +166,7 @@ const Home = () => {
    style={{ width: "100%", height: "500px" }}>
     <div slot="poster" className="loading_text">Loading 3D Experience...</div>
     </model-viewer> */}
-    <model-viewer 
+    {/* <model-viewer 
     id="main-3d-model"
     ref={modelRef}
     loading="lazy"
@@ -181,7 +181,7 @@ const Home = () => {
     style={{ width: "100%", height: "500px", display: 'block' }} 
 >
     <div slot="poster" className="loading_text">Loading 3D Experience...</div>
-</model-viewer>
+</model-viewer> */}
 <br></br><br></br>
 
 </div>
