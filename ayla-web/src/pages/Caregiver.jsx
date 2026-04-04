@@ -215,24 +215,34 @@ reliable and trusted support.</p>
             <p className='f'>Tell us what kind of support you need and we’ll help you find the right caregiver for your family.</p>
             </div>
         <form className='form'>
-<div className='care_form_col'>
+<div className='care_col'>
 <div className='care_form_row'>
-    
+    <div className='col_input'>
+
         <p className='fff'>Name</p>
         <input className='ayla_css' 
         value={name} 
-        onChange={(e) => setName(e.target.value)}s
+        onChange={(e) => setName(e.target.value)}
          type='text' 
          
          />
+    </div>
+    
 
-         <input 
+    <div className='col_input'>
+
+<p className='fff'>Phone Number</p>
+<input 
     className='ayla_css' 
-    type='text' 
+    type='email' 
     value={phone} 
     onChange={(e) => setPhone(e.target.value)} 
 />
+</div>
 
+</div>
+
+    <div className='col_input2'>
 
 <p className='fff'>Email</p>
 <input 
@@ -241,15 +251,57 @@ reliable and trusted support.</p>
     value={email} 
     onChange={(e) => setEmail(e.target.value)} 
 />
+</div>
 
+
+    <div className='col_input2'>
 
 <p className='fff'>Service Needed</p>
-<input 
+<select 
     className='ayla_css' 
-    type='text' 
     value={service} 
-    onChange={(e) => setService(e.target.value)} 
+    onChange={(e) => setService(e.target.value)}
+>
+    <option value="">Select a service</option>
+    <option value="Babysitter">Babysitter</option>
+    <option value="Nurse">Nurse</option>
+    <option value="Tutor">Tutor</option>
+    <option value="Special Needs Care">Special Needs Care</option>
+    <option value="Home Cook">Home Cook</option>
+    <option value="Housekeeper">Housekeeper</option>
+</select>
+</div>
+
+
+<div className='col_input2'>
+    <p className='fff'>Caregiver Nationality</p>
+    <select 
+        className='ayla_css' 
+        value={nationality} 
+        onChange={(e) => setNationality(e.target.value)}
+    >
+        <option value="">Select Nationality</option>
+        <option value="Egyptian">Egyptian</option>
+        <option value="Filipino">Filipino</option>
+        <option value="Ethiopian">Ethiopian</option>
+        <option value="African">African (Other)</option>
+        <option value="Sudanese">Sudanese</option>
+        <option value="Asian">Asian (Other)</option>
+    </select>
+</div>
+
+<div className='col_input2'>
+<p className='fff'>Message</p>
+
+    <input
+    className='messag' 
+    rows="4"               
+    placeholder="Write your message here"
+    type='textarea' 
+    value={message} 
+    onChange={(e) => setMessage(e.target.value)} 
 />
+</div>
 
 
 
@@ -262,18 +314,16 @@ reliable and trusted support.</p>
 </div>
 
             {/* <input className='ayla_css'></input> */}
-</div>
-        </form>
 
-        <br></br>
-        <br></br>
+        </form>
 
 
         {/* <button className='buu' onClick={()=>{console.log(sender_name)}}>
 Send</button> */}
 
-<button className='buu' onClick={sendMsg}>
-  Send
+{/* <Button bu='Submit' onClick={sendMsg}/> */}
+<button className='main_button'  onClick={sendMsg}  >
+  Submit
 </button>
 
 

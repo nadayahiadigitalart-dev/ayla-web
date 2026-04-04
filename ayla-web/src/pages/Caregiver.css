@@ -164,8 +164,179 @@ font-family: Poppins;
 font-size: 0.9375rem;
 font-style: normal;
 font-weight: 500;
-line-height: 130%; /* 1.21875rem */
+line-height: 130%; 
 }
+
+.fff{
+    color: #000;
+font-family: Poppins;
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 500;
+}
+
+.ayla_css{
+    border-radius: 1.25rem;
+border: 1px solid var(--main-color, #AD335A);
+background: #FFF;
+
+height: 2rem;
+align-self: stretch;
+padding-left: 10px;
+}
+
+.messag{
+    width: 90%;
+    border-radius: 1.25rem;
+border: 1px solid var(--main-color, #AD335A);
+background: #FFF;
+
+/* width: 100%; */
+    /* height: 150px;       */
+    padding: 15px;      
+    border: 1.5px solid #AD335A;
+    border-radius: 20px;
+    
+    
+   
+    text-align: left;
+    vertical-align: top;
+    
+    /* display: block;       */
+    resize: vertical;   
+    font-family: inherit;
+    outline: none;
+
+    font-family: Poppins;
+     color: #82A69A;
+
+
+/* height: 9.5625rem; */
+/* align-self: stretch; */
+/* text-align: start; */
+}
+
+.messag::placeholder {
+    color: #181818; /* Your project green */
+    opacity: 0.7;
+    vertical-align: top;
+    font-family: poppins;
+}
+
+.care_form_col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.care_col{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+
+}
+
+.care_form_row{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caregiver_contact{
+    /* width:100rem ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col_input{
+    /* height: 2rem; */
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* gap: 10px; */
+}
+
+.col_input2{
+   /* height: 2rem; */
+   width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* gap: 10px; */
+}
+
+
+    .main_button {
+    position: relative;
+    /* 1. Start with a solid berry background */
+    background-color: #AD335A !important; 
+    
+    /* 2. Text starts as white to be readable on the berry background */
+    color: #FFFFFF !important; 
+    border: 2px solid #ffffff9e;
+    
+    /* Layout & Shape */
+    border-radius: 1.9375rem;
+    padding: 0.625rem 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; 
+    z-index: 1;
+    
+    /* Smooth transition for text and border color */
+    transition: color 1s ease, border-color 1.7s ease;
+}
+
+/* The White Liquid Layer */
+.main_button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 110%; /* Sits hidden below the button */
+    width: 170%; 
+    height: 600%; 
+    background-color: #FFFFFF; /* The liquid is now white */
+    
+    /* The Wave shape */
+    border-radius: 42%; 
+    
+    /* Smooth rising animation */
+    transition: top 1s ease, transform 1.7s ease;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+/* --- Hover State --- */
+
+.main_button:hover {
+    /* 3. Text turns back to berry so it's visible on the white liquid */
+    color: #AD335A !important; 
+    
+    /* Optional: Keep the border berry for a clean outline */
+    border-color: #AD335A; 
+}
+
+.main_button:hover::before {
+    /* 4. White liquid rises to 'wash over' the berry background */
+    top: -180%; 
+    transform: translateX(-50%) rotate(360deg);
+}
+
 
 
 
