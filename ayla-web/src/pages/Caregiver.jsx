@@ -25,9 +25,7 @@ import ic4 from '../assets/emotion-happy-fill.svg';
 import cimg from '../assets/cimg.png';
 
 import { Supabase } from '../Supabase';
-
-
-
+import Footer from '../components/Footer';
 
 
 
@@ -91,6 +89,7 @@ if (error) {
 
 
     return ( <>
+    <div className='all'>
 <div className='bg'>
 
         <img className='c' src={caree} alt='Caregiver_ayla_services'/>
@@ -329,6 +328,11 @@ Send</button> */}
 
 
 </section>
+
+<Footer/>
+</div>
+
+
 
 
     

@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import HomeAR from './pages/HomeAR';
 import Caregiver from './pages/Caregiver';
+import DiscoverPage from './pages/DiscoverPage';
+
+
 
 // import Contact from './components/Contact';
 
@@ -15,9 +18,8 @@ import Caregiver from './pages/Caregiver';
             {/* <Route path='/projectdetails' element={<Projectdetails />} /> */}
            <Route path="/ar" element={<HomeAR />} />
            <Route path="/caregiver-services" element={<Caregiver />} />
-
-
-
+           <Route path="/Discover" element={<DiscoverPage />} />
+           
             {/* <Route path='*' element={<Error />} /> */}
 
         </Routes>

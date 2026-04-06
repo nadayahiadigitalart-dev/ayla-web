@@ -166,7 +166,7 @@ const Home = () => {
    style={{ width: "100%", height: "500px" }}>
     <div slot="poster" className="loading_text">Loading 3D Experience...</div>
     </model-viewer> */}
-    {/* <model-viewer 
+    <model-viewer 
     id="main-3d-model"
     ref={modelRef}
     loading="lazy"
@@ -181,7 +181,7 @@ const Home = () => {
     style={{ width: "100%", height: "500px", display: 'block' }} 
 >
     <div slot="poster" className="loading_text">Loading 3D Experience...</div>
-</model-viewer> */}
+</model-viewer>
 <br></br><br></br>
 
 </div>
@@ -327,7 +327,7 @@ const Home = () => {
     <div className='ppl_col'>
       <p className='mf'>What other People say?</p>
       
-      {/* The Dynamic Box */}
+      
       <div className='ppl_box_row'>
         <div className="ppl_img_container">
            <img className='ppl_img' src={current.img} alt={current.author}/>
@@ -338,7 +338,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* The Buttons */}
+      
       <div className='ppl_buttons'>
         <button className='ppl_btn' onClick={prevTestimonial}>‹</button>
         <button className='ppl_btn' onClick={nextTestimonial}>›</button>

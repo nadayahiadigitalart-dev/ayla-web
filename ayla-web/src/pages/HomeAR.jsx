@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import G189 from "../assets/Group 189.png";
 import '@google/model-viewer';
 import glb from "../components/baby_bed.glb";
-import "./HAR.css"; 
+// import "./HAR.css"; 
 import WhyAyla from '../components/whyAyla';
 import Button from '../components/Button';
 import PureCSSGallery from '../components/PureCSSGallery';

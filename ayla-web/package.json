@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^12.38.0",
     "i18next": "^26.0.3",
     "i18next-browser-languagedetector": "^8.2.1",
     "ogl": "^1.0.11",
