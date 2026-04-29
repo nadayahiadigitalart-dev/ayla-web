@@ -40,7 +40,7 @@ const Footer = () => {
 
           <div className='col_footer2'>
 
-           <p className='mf2'>Explore</p>
+           <p className='mmf2'>Explore</p>
            <br></br>
            <div className='footer_col'>
             <p className='wf2'>Home</p>
@@ -54,7 +54,7 @@ const Footer = () => {
 
           <div className='col_footer2'>
 
-             <p className='mf2'>Services</p>
+             <p className='mmf2'>Services</p>
            <br></br>
            <div className='footer_col'>
             <p className='wf2'>Tutor</p>
@@ -69,7 +69,7 @@ const Footer = () => {
           <div className='col_footer2'>
 
 
-             <p className='mf2'>Support</p>
+             <p className='mmf2'>Support</p>
            <br></br>
            <div className='footer_col'>
             <p className='wf2'>Contact us</p>
@@ -83,7 +83,7 @@ const Footer = () => {
           <div className='col_footer2'>
 
 
-             <p className='mf2'>Work with us</p>
+             <p className='mmf2'>Work with us</p>
            <br></br>
            <div className='footer_col'>
             <p className='wf2'>Careers</p>

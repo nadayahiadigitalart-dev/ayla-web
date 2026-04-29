@@ -1,0 +1,26 @@
+/* Force the AR button to be visible even on desktop */
+#ar-button {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Optional: Style the Hotspots so they aren't invisible dots */
+.Hotspot {
+  background: #82A69A; /* Your Sage Green */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.HotspotAnnotation {
+  background: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  position: absolute;
+  transform: translate(20px, -20px);
+  width: max-content;
+}

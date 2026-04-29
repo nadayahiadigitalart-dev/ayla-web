@@ -37,9 +37,22 @@ const Discover = () => {
   }, [selectedCategory]);
 
 
+  // async function seo() {
+  // const res = await Supabase.from("SEO").select("*")
+  // .eq("page_title", "Home");
+  // }
 
-
+  
     return ( <>
+
+    
+      {/* <Helmet>
+        <title>{seo.meta_title}</title>
+        <meta name="description" content={seo.meta_description} />
+        <meta property="og:title" content="About Us" />
+        <meta property="og:image" content="/images/about.png" />
+          <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+      </Helmet> */}
 
     <div className=''>
 

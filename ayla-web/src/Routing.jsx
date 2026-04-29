@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import HomeAR from './pages/HomeAR';
 import Caregiver from './pages/Caregiver';
 import DiscoverPage from './pages/DiscoverPage';
+import Test from './pages/Test';
+import Career from './pages/Career';
 
 
 
@@ -18,7 +20,10 @@ import DiscoverPage from './pages/DiscoverPage';
             {/* <Route path='/projectdetails' element={<Projectdetails />} /> */}
            <Route path="/ar" element={<HomeAR />} />
            <Route path="/caregiver-services" element={<Caregiver />} />
-           <Route path="/Discover" element={<DiscoverPage />} />
+           <Route path="/discover" element={<DiscoverPage />} />
+           <Route path="/careers" element={<Career />} />
+           <Route path="/test" element={<Test />} />
+
            
             {/* <Route path='*' element={<Error />} /> */}
 

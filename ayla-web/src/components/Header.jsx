@@ -39,7 +39,7 @@ const Header = () => {
 
                 {/* The Main Navigation */}
                 <ul className={`nav_links ${isMenuOpen ? 'active' : ''}`}>
-                    <li className='clicked'>Home</li>
+                    <li className='unclicked'>Home</li>
                     <li className='unclicked'>About</li>
                     <li className='unclicked'>Features</li>
                     <li className='unclicked'>Parenting</li>
@@ -54,7 +54,10 @@ const Header = () => {
                         </div>
                         {/* This now sits inside dropdown_parent */}
                         <ul className='dropdown_menu'>
+<Link to="/careers" style={{ textDecoration: "none", color: "inherit" }}>
+
                             <li>Careers</li>
+                            </Link>
                             <li>How it works</li>
 <Link to="/caregiver-services" style={{ textDecoration: "none", color: "inherit" }}>
 

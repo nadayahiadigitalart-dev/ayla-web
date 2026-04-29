@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import Header from '../components/Header';
 import G189 from "../assets/Group 189.png";
-import '@google/model-viewer';
+// import '@google/model-viewer';
 import glb from "../components/baby_bed.glb";
 // import "./HAR.css"; 
 import WhyAyla from '../components/whyAyla';

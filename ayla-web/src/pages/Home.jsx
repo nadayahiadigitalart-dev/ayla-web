@@ -9,7 +9,6 @@ import Header from '../components/Header';
 import parent from "../assets/parent.svg";
 import G189 from "../assets/Group 189.png";
 
-import '@google/model-viewer';
 import glb from "../components/baby_bed.glb";
 
 
@@ -45,6 +44,7 @@ import huda2 from '../assets/huda.png';
 import im1 from '../assets/im1.svg'; 
 import im2 from '../assets/im2.svg'; 
 import Footer from '../components/Footer';
+import { Supabase } from './../Supabase';
 
 
 
@@ -93,11 +93,11 @@ const Home = () => {
 
 
    const modelRef = useRef(null);
-    // 1. Add a "ready" state
+   
     const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
-        // 2. Set to true only after the first render
+       
         setIsReady(true);
         
         const modelViewer = modelRef.current;
@@ -108,7 +108,21 @@ const Home = () => {
         }
     }, []);
 
+    // async function seo() {
+    //     const res = await Supabase.from("SEO").select("*")
+    //     .eq("page_title", "Home");
+        
+    // }
+
     return (<>
+
+      {/* <Helmet>
+        <title>{seo.meta_title}</title>
+        <meta name="description" content={seo.meta_description} />
+        <meta property="og:title" content="About Us" />
+        <meta property="og:image" content="/images/about.png" />
+          <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+      </Helmet> */}
 
     <div className='bg'>
 

@@ -85,7 +85,7 @@ font-family: Aclonica;
 font-size: 2rem;
 font-style: normal;
 font-weight: 400;
-line-height: 120%; /* 2.4rem */
+line-height: 120%;
 margin: 0px;
 }
 
@@ -95,7 +95,7 @@ font-family: Aclonica;
 font-size: 2rem;
 font-style: normal;
 font-weight: 400;
-line-height: 120%; /* 2.4rem */
+line-height: 120%; 
 margin: 0px; 
 }
 
@@ -105,7 +105,7 @@ font-family: Poppins;
 font-size: 1.25rem;
 font-style: normal;
 font-weight: 500;
-line-height: 143%; /* 1.7875rem */
+line-height: 143%; 
 margin: 0px;
 margin-top: 15px;
 }
@@ -116,7 +116,7 @@ font-family: Poppins;
 font-size: 1rem;
 font-style: normal;
 font-weight: 400;
-line-height: 143%; /* 1.43rem */
+line-height: 143%; 
 }
 
 .wf1{
@@ -125,7 +125,7 @@ font-family: Poppins;
 font-size: 1rem;
 font-style: normal;
 font-weight: 500;
-line-height: 130%; /* 1.3rem */
+line-height: 130%;
 }
 
 .shop{
@@ -140,7 +140,7 @@ line-height: 130%; /* 1.3rem */
    background-repeat: no-repeat;
    background-size: cover;
 
-    /* margin-bottom: 340px; */
+    
 
 }
 
@@ -403,7 +403,7 @@ box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   gap: 15px;
   margin-top: 20px;
-  justify-content: flex-end; /* Moves buttons to the right like your image */
+  justify-content: flex-end; 
 }
 
 .ppl_btn {
@@ -411,7 +411,7 @@ box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
   height: 40px;
   border-radius: 50%;
   border: none;
-  background-color: #AD335A; /* Your berry color */
+  background-color: #AD335A;
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -494,14 +494,14 @@ box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
 
 .lang_dropdown {
     position: absolute;
-    top: 100%; /* Sits right under the "En" */
+    top: 100%; 
     right: 0;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 10px;
     width: 100px;
-    z-index: 1000; /* Ensures it stays above the Hero section */
+    z-index: 1000; 
 }
 
 .lang_option {
@@ -513,7 +513,7 @@ box-shadow: 0 4px 19.3px 0 rgba(0, 0, 0, 0.15);
 }
 
 .lang_option:hover {
-    background: #F4D1DD; /* Soft pink hover */
+    background: #F4D1DD; 
 }
 
 
@@ -532,7 +532,7 @@ font-family: Poppins;
 font-size: 2rem;
 font-style: normal;
 font-weight: 500;
-line-height: 130%; /* 2.6rem */
+line-height: 130%; 
 }
 
 .pink_f{
@@ -541,7 +541,7 @@ font-family: Poppins;
 font-size: 1.25rem;
 font-style: normal;
 font-weight: 600;
-line-height: 130%; /* 1.625rem */
+line-height: 130%; 
 }
 
 .dis{
@@ -669,13 +669,15 @@ background: var(--light-pink, #FBE0EA);
     }
 
     .absolute_bg {
-        /* Ensure background image stays centered on narrow screens */
+       
         background-position: center;
     }
 
     .absolute_parent{
-    margin-right: 100px;
+    /* margin-right: 100px; */
+    width: 100%;
 
+    
     }
 
     .shop{
@@ -686,7 +688,6 @@ background: var(--light-pink, #FBE0EA);
    margin-top: 70px;
    margin-left: 30px;
    width: 90%;
-
 
 
     }
@@ -764,6 +765,7 @@ align-items: normal;
         width: 70%;
         margin-top: 200px;
     }
+    
 
 
 
