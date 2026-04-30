@@ -7,6 +7,8 @@ import Caregiver from './pages/Caregiver';
 import DiscoverPage from './pages/DiscoverPage';
 import Test from './pages/Test';
 import Career from './pages/Career';
+import JobDetails from './pages/JobDetails';
+import JobForm from './pages/JobForm';
 
 
 
@@ -22,6 +24,9 @@ import Career from './pages/Career';
            <Route path="/caregiver-services" element={<Caregiver />} />
            <Route path="/discover" element={<DiscoverPage />} />
            <Route path="/careers" element={<Career />} />
+           <Route path="/jobdetails/:id" element={<JobDetails />} />
+           <Route path="/apply" element={<JobForm />} />
+
            <Route path="/test" element={<Test />} />
 
            

@@ -1,0 +1,106 @@
+.job_form_row_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 0;
+    overflow-x: hidden;
+}
+
+.side_img_column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.floating_shape {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.form_main_column {
+    flex: 2;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.form_header_text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form_title {
+    color: #AD335A;
+    font-size: 2.5rem;
+    font-family: 'Avenir', sans-serif; /* Use your project's main font */
+}
+
+.ayla_job_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_row {
+    display: flex;
+    gap: 20px;
+}
+
+.input_group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.full_width {
+    flex: none;
+}
+
+.input_group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.input_group input, 
+.input_group select {
+    border: 1px solid #AD335A;
+    border-radius: 20px;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.file_input_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.upload_icon {
+    position: absolute;
+    right: 15px;
+    color: #AD335A;
+}
+
+.submit_btn {
+    background-color: #AD335A;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.submit_btn:hover {
+    background-color: #8a2848;
+}
+
+.submit_btn:disabled {
+    background-color: #ccc;
+}

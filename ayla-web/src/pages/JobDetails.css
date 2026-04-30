@@ -1,0 +1,66 @@
+.details_page_container {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.back_button {
+  background: none;
+  border: none;
+  color: #AD335A;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.job_main_title {
+  font-size: 2.5rem;
+  color: #2D2D2D;
+  margin-bottom: 30px;
+}
+
+.info_section {
+  margin-bottom: 40px;
+}
+
+.sub_heading {
+  color: #AD335A;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.description_text {
+  line-height: 1.8;
+  white-space: pre-line; /* Keeps line breaks from the database */
+}
+
+.details_list {
+  list-style: none;
+  padding: 0;
+}
+
+.details_list li {
+  margin-bottom: 10px;
+}
+
+.arabic_text {
+  direction: rtl;
+  text-align: right;
+  margin-top: 15px;
+  color: #666;
+}
+
+.apply_now_btn {
+  background-color: #AD335A;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}

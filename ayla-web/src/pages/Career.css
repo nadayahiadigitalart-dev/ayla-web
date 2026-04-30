@@ -12,8 +12,9 @@ align-items: flex-start;
 gap: 0.75rem;
 align-self: stretch;
 margin-left: 60px;
-margin-top: 40px;
-width: 50%;
+margin-top: 60px;
+width: 70%;
+/* margin-top: 20px; */
 }
 
 
@@ -69,21 +70,17 @@ line-height: 120%; /* 1.2rem */
 }
 
 .absol_career{
-    /* position: absolute; */
-    /* top: 0;
-    left: 0; */
+    position: absolute;
+    z-index: -2;
+    top: -60px;
+    /* left: 0; */
+    /* top: 100; */
     width: 100%;
-
-      background-image: url('../assets/workwithus_bg.svg');
-
-   background-repeat: no-repeat;
-   background-size: cover;
-
 }
 
 
-
 .care_section{
+  width: 60%;
     margin-top: 20px;
 }
 
@@ -120,6 +117,26 @@ font-size: 1.75rem;
 font-style: normal;
 font-weight: 400;
 line-height: 110%; 
+margin: 0px;
+}
+
+.midf{
+  color: #050505;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 1.2rem */
+}
+
+.pinf{
+  color: #AD335A;
+text-align: center;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: 130%;
 }
 
 .role_tags_container {
@@ -150,6 +167,8 @@ line-height: normal;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin-bottom: 80px;
+
+  width: 600px;
 }
 
 .step_card {
@@ -168,12 +187,17 @@ line-height: normal;
   color: #AD335A;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 
-.trust_section {
-  background-color: #fff;
-  margin: 60px 0;
+.trust_section2 {
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .trust_title {
@@ -184,12 +208,17 @@ line-height: normal;
 .trust_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .trust_grid ul {
   list-style-type: disc;
-  padding-left: 20px;
+  /* padding-left: 20px; */
+}
+
+.hero_section{
+  width: 40%;
+  margin-bottom: 60px;
 }
 
 
@@ -219,7 +248,11 @@ line-height: normal;
 }
 
 .footer_cta {
-  text-align: center;
+ 
   margin-top: 100px;
-  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
 }
