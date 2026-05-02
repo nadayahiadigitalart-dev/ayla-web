@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { supabase } from './supabaseClient';
+import { Supabase } from '../Supabase';
 import './JobForm.css';
 
 // Import your images/shapes here
-import side_shape_left from './assets/shape_left.png'; 
-import side_shape_right from './assets/shape_right.png';
+import side_shape_left from '../assets/left_im.png'; 
+import side_shape_right from '../assets/right_im.png';
 
 const JobForm = () => {
     const [searchParams] = useSearchParams();
@@ -20,15 +20,15 @@ const JobForm = () => {
         linkedin_profile: '',
         city_area: '',
         nationality: '',
-        cv_url: '' // For the file path
+        cv_url: '' 
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Fetch available jobs for the dropdown
+    
     useEffect(() => {
         const fetchPositions = async () => {
-            const { data, error } = await supabase
+            const { data, error } = await Supabase
                 .from('Careers')
                 .select('jobname')
                 .eq('is_open', true);
@@ -47,7 +47,7 @@ const JobForm = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        const { error } = await supabase
+        const { error } = await Supabase
             .from('apply_form_responses')
             .insert([formData]);
 
@@ -62,12 +62,12 @@ const JobForm = () => {
 
     return (
         <div className="job_form_row_container">
-            {/* Left Image Column */}
+         
             <div className="side_img_column">
                 <img src={side_shape_left} alt="" className="floating_shape" />
             </div>
 
-            {/* Middle Form Column */}
+           
             <div className="form_main_column">
                 <div className="form_header_text">
                     <h1 className="form_title">Apply to Join Ayla</h1>
@@ -137,7 +137,7 @@ const JobForm = () => {
                 </form>
             </div>
 
-            {/* Right Image Column */}
+            
             <div className="side_img_column">
                 <img src={side_shape_right} alt="" className="floating_shape" />
             </div>

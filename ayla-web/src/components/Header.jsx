@@ -15,10 +15,10 @@ const Header = () => {
     const [isLangOpen, setIsLangOpen] = useState(false);
 
     const navigate = useNavigate();
-    const location = useLocation(); // 2. DEFINE LOCATION HERE (This fixes the error)
+    const location = useLocation(); 
 
     const handleLanguageChange = (path) => {
-        // Prevent navigating if we are already on that path
+        
         if (location.pathname === path) {
             setIsLangOpen(false);
             return;
@@ -27,7 +27,7 @@ const Header = () => {
         setIsLangOpen(false);
     };
 
-    // Determine if we are currently on the Arabic page to change the label
+
     const isArabic = location.pathname === '/ar';
 
     return (
@@ -37,27 +37,28 @@ const Header = () => {
             <div className='header_row'>
                 <img className='logo' src={logo} alt='ayla_logo_Parenting' />
 
-                {/* The Main Navigation */}
+               
                 <ul className={`nav_links ${isMenuOpen ? 'active' : ''}`}>
                     <li className='unclicked'>Home</li>
                     <li className='unclicked'>About</li>
-                    <li className='unclicked'>Features</li>
                     <li className='unclicked'>Parenting</li>
                     <li className='unclicked'>Store</li>
                     <li className='unclicked'>Discover</li>
                     
-                    {/* FIX: Move the dropdown list INSIDE the Contact Us container */}
+                    
                     <li className='dropdown_parent'>
                         <div className='header_row2'>
                             <p className='unclicked2'>Contact us</p>
                             <img src={arrow} alt='arrow_down' />
                         </div>
-                        {/* This now sits inside dropdown_parent */}
+                        
                         <ul className='dropdown_menu'>
 <Link to="/careers" style={{ textDecoration: "none", color: "inherit" }}>
 
                             <li>Careers</li>
                             </Link>
+                    <li className='unclicked'>Features</li>
+
                             <li>How it works</li>
 <Link to="/caregiver-services" style={{ textDecoration: "none", color: "inherit" }}>
 
@@ -69,7 +70,7 @@ const Header = () => {
                 </ul>
 
                 <div className='sign_row'>
-                    {/* FIX: Wrap language in a container to handle the click/dropdown */}
+                   
                     <div className='lang_container' onClick={() => setIsLangOpen(!isLangOpen)}>
                         <div className='lang_row'>
                             <img src={vector} alt='vector_language' />
@@ -79,7 +80,7 @@ const Header = () => {
                         
                         {isLangOpen && (
                             <ul className='lang_dropdown'>
-                              {/* 4. Add onClick to the list items */}
+                            
                     <li onClick={() => handleLanguageChange('/ar')}>Arabic</li>
                     <li onClick={() => handleLanguageChange('/')}>English</li>
                 </ul>

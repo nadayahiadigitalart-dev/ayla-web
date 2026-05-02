@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Supabase } from '../Supabase';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 import './JobDetails.css';
@@ -63,7 +63,7 @@ const JobDetails = () => {
           <p className='f'>Work on a meaningful product that supports mothers and families. Be part of a creative, user-focused team.</p>
           {/* <p className="arabic_text">فرصة لتصميم تجربة لها تأثير حقيقي في حياة الناس.</p> */}
         </section>
-<Link to={`/jobform?job=${job.jobname}`} className="apply_btn">
+<Link to={`/apply`} className="apply_btn">
         <button className="apply_now_btn">Apply Now</button>
 </Link>
       </div>
