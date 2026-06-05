@@ -5,7 +5,7 @@ import vector from "../assets/Vector.svg";
 import arrow from "../assets/arrow.svg";
 import "./Header.css";
 
-// import { useNavigate } from 'react-router-dom';
+// import { useNavigate, Link } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -39,11 +39,21 @@ const Header = () => {
 
                
                 <ul className={`nav_links ${isMenuOpen ? 'active' : ''}`}>
-                    <li className='unclicked'>Home</li>
-                    <li className='unclicked'>About</li>
-                    <li className='unclicked'>Parenting</li>
-                    <li className='unclicked'>Store</li>
-                    <li className='unclicked'>Discover</li>
+                    <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                        <li className='unclicked'>Home</li>
+                    </Link>
+                    <Link to="/about" style={{ textDecoration: "none", color: "inherit" }}>
+                        <li className='unclicked'>About</li>
+                    </Link>
+                    <Link to="/parenting" style={{ textDecoration: "none", color: "inherit" }}>
+                        <li className='unclicked'>Parenting</li>
+                    </Link>
+                    <Link to="/store" style={{ textDecoration: "none", color: "inherit" }}>
+                        <li className='unclicked'>Store</li>
+                    </Link>
+                    <Link to="/discover" style={{ textDecoration: "none", color: "inherit" }}>
+                        <li className='unclicked'>Discover</li>
+                    </Link>
                     
                     
                     <li className='dropdown_parent'>
@@ -86,8 +96,9 @@ const Header = () => {
                 </ul>
             )}
                     </div>
-
-                    <p className='main_button'>Sign up</p>
+<Link to={'/apply'} style={{textDecoration: 'none'}} >
+                    <p className='main_button'>apply</p>
+                    </Link>
 
                     <div className='burger' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <div className={isMenuOpen ? 'line1 toggle' : 'line1'}></div>
