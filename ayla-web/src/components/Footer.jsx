@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import aylaLogo from '../assets/logo-footer.png'; 
 import phoneImg from '../assets/download.svg';   
-// import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
+
 import insta from '../assets/insta.svg';   
 import f from '../assets/facebook.svg';   
 import t from '../assets/tiktok.svg';   
@@ -11,15 +11,15 @@ import t from '../assets/tiktok.svg';
 const Footer = () => {
   return (
     <footer className="footer-container">
-      {/* 1. The Hover Content (App and Text) */}
+      
       <div className="hover-content">
-        {/* <h2 className="download-text">Download app <br /> now</h2> */}
+      
         <img  src={phoneImg} alt="Ayla App" className="phone-mockup" />
       </div>
 
       
       <div className="footer-main">
-        {/* <div className="footer-top-row"> */}
+       
           <div className="footer-brand">
             <img  src={aylaLogo} alt="Ayla Logo" className="footer-logo" />
             {/* <br></br> */}
@@ -47,7 +47,7 @@ const Footer = () => {
             <p className='wf2'>About</p>
             <p className='wf2'>Discover</p>
             <p className='wf2'>Parenting</p>
-            {/* <p className='wf2'>Ayla Store</p> */}
+           
 
            </div>
 </div>
@@ -61,7 +61,7 @@ const Footer = () => {
             <p className='wf2'>Nurses</p>
             <p className='wf2'>Find Babysitters</p>
             <p className='wf2'>Special Needs Care</p>
-            {/* <p className='wf2'>Housekeeping</p> */}
+           
 
            </div>
            </div>
@@ -95,7 +95,7 @@ const Footer = () => {
 </div>
           </div>
         </div>
-      {/* </div> */}
+      
     </footer>
   );
 };

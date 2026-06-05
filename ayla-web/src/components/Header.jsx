@@ -5,7 +5,7 @@ import vector from "../assets/Vector.svg";
 import arrow from "../assets/arrow.svg";
 import "./Header.css";
 
-// import { useNavigate, Link } from 'react-router-dom';
+
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
