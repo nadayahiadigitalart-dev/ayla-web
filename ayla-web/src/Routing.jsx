@@ -11,6 +11,7 @@ import JobDetails from './pages/JobDetails';
 import JobForm from './pages/JobForm';
 import StorePage from './pages/StorePage';
 import ProductDetails from './pages/ProductDetails';
+import ParentingStages from './pages/ParentingStages';
 
 
 
@@ -29,6 +30,8 @@ import ProductDetails from './pages/ProductDetails';
            <Route path="/apply" element={<JobForm />} />
            <Route path="/store" element={<StorePage />} />
            <Route path="/product/:id" element={<ProductDetails />} />
+           <Route path="/parenting" element={<ParentingStages />} />
+
 
 
            <Route path="/test" element={<Test />} />

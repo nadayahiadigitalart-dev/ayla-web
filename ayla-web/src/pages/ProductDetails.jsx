@@ -14,11 +14,20 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProductData = async () => {
             setLoading(true);
+            
+            // Convert the string parameter from the URL to an integer
+            const numericId = parseInt(id, 10);
+
+            if (isNaN(numericId)) {
+                console.error("Invalid product ID format");
+                setLoading(false);
+                return;
+            }
+
             const { data, error } = await Supabase
                 .from('store')
                 .select('*')
-                .eq('id', id)
-                .order('id', { ascending: true})
+                .eq('id', numericId) // Query using the integer value to match Database type
                 .single();
 
             if (data) {
@@ -49,45 +58,45 @@ const ProductDetails = () => {
         <div className="product_details_wrapper">
             <Header />
             
-            {/* 3D Model Section Viewport */}
-      <div className="model_viewer_container">
-    {product.glb_url ? (
-        <model-viewer
-            src={product.glb_url}
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            camera-controls
-            tone-mapping="neutral"
-            poster={product.image_url} /* Uses the image url from your database table */
-            shadow-intensity="1"
-            auto-rotate
-            style={{ width: '100%', height: '100%' }}
-        >
-            {/* Dynamically loops and renders hotspots directly from your Supabase row */}
-            {product.hotspots && Array.isArray(product.hotspots) && product.hotspots.map((spot, index) => (
-                <button 
-                    key={index}
-                    className="Hotspot" 
-                    slot={spot.slot} 
-                    data-position={spot.position} 
-                    data-normal={spot.normal} 
-                    data-visibility-attribute="visible"
-                >
-                    <div className="HotspotAnnotation">{spot.annotation}</div>
-                </button>
-            ))}
+            {/* 3D Model Section Viewport - PUT BACK & SECURED */}
+            <div className="model_viewer_container">
+                {product.glb_url ? (
+                    <model-viewer
+                        src={product.glb_url}
+                        ar
+                        ar-modes="scene-viewer webxr quick-look"
+                        camera-controls
+                        tone-mapping="neutral"
+                        poster={product.image_url} 
+                        shadow-intensity="1"
+                        auto-rotate
+                        style={{ width: '100%', height: '100%' }}
+                    >
+                        {/* Dynamically loops and renders custom hotspots directly from Supabase */}
+                        {product.hotspots && Array.isArray(product.hotspots) && product.hotspots.map((spot, index) => (
+                            <button 
+                                key={index}
+                                className="Hotspot" 
+                                slot={spot.slot} 
+                                data-position={spot.position} 
+                                data-normal={spot.normal} 
+                                data-visibility-attribute="visible"
+                            >
+                                <div className="HotspotAnnotation">{spot.annotation}</div>
+                            </button>
+                        ))}
 
-            <button slot="ar-button" id="ar-button" className="ar_mobile_button">
-                View in your space
-            </button>
-        </model-viewer>
-    ) : (
-        /* Fallback if glb_url column happens to be empty */
-        <div className="no_model_fallback">
-            <img src={product.image_url} alt={product.name} />
-        </div>
-    )}
-</div>
+                        <button slot="ar-button" id="ar-button" className="ar_mobile_button">
+                            View in your space
+                        </button>
+                    </model-viewer>
+                ) : (
+                    /* Fallback to static image if glb_url column happens to be empty */
+                    <div className="no_model_fallback">
+                        <img src={product.image_url} alt={product.name} />
+                    </div>
+                )}
+            </div>
 
             {/* Split Details Section Container */}
             <main className="info_split_section">
