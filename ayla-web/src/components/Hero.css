@@ -25,7 +25,7 @@ font-family: Aclonica;
 font-size: 3rem;
 font-style: normal;
 font-weight: 400;
-line-height: 113%; /* 4.52rem */
+line-height: 113%; 
 margin: 0px;
 margin-top: 370px;
 }
@@ -40,11 +40,35 @@ font-family: Poppins;
 font-size: 1.25rem;
 font-style: normal;
 font-weight: 400;
-line-height: 130%; /* 1.625rem */
+line-height: 130%;
 }
 
 
 @media screen and (max-width: 1024px) {
+
+    .bgsize{
+        margin-top: 100px
+    }
+    
+.main_f_hero{
+    /* margin-top: 160px; */
+    width: 80%;
+
+margin-top: 290px;
+font-size: 2rem;
+}
+
+.wf{
+    width: 70%;
+font-size: 0.9rem;
+
+}
+
+
+}
+
+
+@media screen and (max-width: 500px) {
 
     .bgsize{
         margin-top: 100px

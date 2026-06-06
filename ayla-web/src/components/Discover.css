@@ -13,7 +13,7 @@
 
 .discover_arc_stage {
     position: absolute;
-    bottom: 200px; /* Adjust this to sit right above the text */
+    bottom: 200px; 
     width: 100%;
     height: 100%;
     display: flex;

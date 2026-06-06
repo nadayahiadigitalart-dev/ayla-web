@@ -5,7 +5,7 @@ const CareCard = (props) => {
   return (<>
 
   <div className='card'>
-    <img className='' src={props.src} alt={props.alt}/>
+    <img className='cz' src={props.src} alt={props.alt}/>
     <p className='pf'>{props.t}</p>
     <p className='ff'>{props.par}</p>
   </div>

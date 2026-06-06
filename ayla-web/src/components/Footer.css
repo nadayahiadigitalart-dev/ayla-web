@@ -208,6 +208,7 @@ margin: 0px;
     }
 
     .col_footer{
+        width: 90%;
         flex-direction: row;
     gap: 10px;
 

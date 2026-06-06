@@ -124,14 +124,13 @@ gap: 0.625rem;
 
 }
 
-
 .dropdown_parent {
     position: relative;
     cursor: pointer;
 }
 
 .dropdown_menu {
-    display: none; /* Hidden by default */
+    display: none; 
     position: absolute;
     top: 100%;
     left: 0;
@@ -147,7 +146,7 @@ gap: 0.625rem;
 }
 
 .dropdown_parent:hover .dropdown_menu {
-    display: flex; /* Show on hover */
+    display: flex; 
 }
 
 .dropdown_menu li {
@@ -206,14 +205,14 @@ gap: 0.625rem;
 
 .main_button {
     position: relative;
-    /* 1. Start with a solid berry background */
+   
     background-color: #AD335A !important; 
     
-    /* 2. Text starts as white to be readable on the berry background */
+    
     color: #FFFFFF !important; 
     border: 2px solid #AD335A;
     
-    /* Layout & Shape */
+    
     border-radius: 1.9375rem;
     padding: 0.625rem 1.5rem;
     display: inline-flex;
@@ -223,52 +222,50 @@ gap: 0.625rem;
     overflow: hidden; 
     z-index: 1;
     
-    /* Smooth transition for text and border color */
+   
     transition: color 1s ease, border-color 1.7s ease;
 }
 
-/* The White Liquid Layer */
 .main_button::before {
     content: "";
     position: absolute;
     z-index: -1;
     left: 50%;
-    top: 110%; /* Sits hidden below the button */
+    top: 110%; 
     width: 170%; 
     height: 600%; 
-    background-color: #FFFFFF; /* The liquid is now white */
+    background-color: #FFFFFF; 
     
-    /* The Wave shape */
     border-radius: 42%; 
     
-    /* Smooth rising animation */
+    
     transition: top 1s ease, transform 1.7s ease;
     transform: translateX(-50%) rotate(0deg);
 }
 
-/* --- Hover State --- */
+
 
 .main_button:hover {
-    /* 3. Text turns back to berry so it's visible on the white liquid */
+    
     color: #AD335A !important; 
     
-    /* Optional: Keep the border berry for a clean outline */
+   
     border-color: #AD335A; 
 }
 
 .main_button:hover::before {
-    /* 4. White liquid rises to 'wash over' the berry background */
+   
     top: -180%; 
     transform: translateX(-50%) rotate(360deg);
 }
 
 @media screen and (max-width: 1024px) {
     .logo{
-        width: 10%;
+        width: 15%;
     }
 
     .nav_links {
-        display: none; /* Hide standard menu */
+        display: none; 
         position: absolute;
         right: 0px;
         height: 92vh;
@@ -298,7 +295,7 @@ gap: 0.625rem;
     }
 }
 
-/* Existing styles below... */
+
 .clicked { color: #AD335A; font-family: Poppins; font-weight: 500; }
 .unclicked { color: #010101; font-family: Poppins; font-weight: 400; }
 .main_button { background: #AD335A; color: white; border-radius: 1.9rem; padding: 0.6rem 1.5rem; cursor: pointer;   border: 0.3px solid #ffffff;  }

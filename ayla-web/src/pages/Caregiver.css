@@ -170,6 +170,7 @@ font-size: 0.9375rem;
 font-style: normal;
 font-weight: 500;
 line-height: 130%; 
+text-align: left;
 }
 
 .fff{
@@ -340,6 +341,119 @@ background: #FFF;
     /* 4. White liquid rises to 'wash over' the berry background */
     top: -180%; 
     transform: translateX(-50%) rotate(360deg);
+}
+
+
+@media (max-width: 992px) {
+    .c {
+        object-fit: cover;
+        height: 70vh;
+    }
+
+    .car {
+        margin-bottom: 120px;
+    }
+
+    .car_col {
+        width: 80%;
+        margin-left: 40px;
+        margin-top: 80px;
+    }
+
+    .mfb {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .fam_safety {
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding: 0 20px;
+        margin-top: 100px;
+    }
+
+    .fam_col {
+        width: 100%;
+    }
+
+    .safety_img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .car_col {
+        width: 90%;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    .mfb {
+        font-size: 1.75rem;
+    }
+
+    .cards_layout {
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .how_row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        border-radius: 1.5rem;
+    }
+
+    .care_form_row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .care_cards{
+margin-left: 30px;
+    }
+
+    .col_input {
+        width: 100%;
+    }
+
+    .mfb3_heading {
+        font-size: 1.5rem;
+    }
+
+    .caregiver_contact {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 412px) {
+    .car_col {
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .mfb {
+        font-size: 1.5rem;
+    }
+
+    .car_col{
+        margin-top: 160px;
+    }
+
+    .care_cards{
+gap: 0px;
+    }
+
+    .mfb{
+        color: #f6f6f6;
+
+    }
+
+    .mfw{
+        color: #ad335a;
+    }
 }
 
 
