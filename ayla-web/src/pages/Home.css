@@ -623,7 +623,22 @@ background: var(--light-pink, #FBE0EA);
 
 
 
-/* //// */
+
+
+
+@media screen and (max-width: 1024px) {
+.absolute_bg{
+background-image: url('../assets/Group 246.png');
+       
+
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+}
+
+
+
 
 
 
@@ -671,7 +686,10 @@ background: var(--light-pink, #FBE0EA);
 
     .absolute_bg {
        
-        background-position: center;
+        /* background-position: center;
+        width: 100%;
+        height: 300px; */
+        display: none;
     }
 
     .absolute_parent{

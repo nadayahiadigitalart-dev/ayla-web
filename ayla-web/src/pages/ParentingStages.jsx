@@ -4,6 +4,10 @@ import './ParentingStages.css';
 
 
 import ph from '../assets/toddler.png';
+import ph1 from '../assets/adhd.png';
+import ph2 from '../assets/specialneed.png';
+import ph3 from '../assets/learnindis.png';
+
 import berryWaveShape from '../assets/waveberry.png'; 
 import Button from '../components/Button';
 import toddlerMainImg from '../assets/Rectangle.png'; 
@@ -195,7 +199,7 @@ const ParentingStages = () => {
         <div className="special_cards_grid">
             <div className="condition_feature_card">
                 <div className="card_thumbnail_placeholder">
-                    <img src={ph} alt="ADHD support interface screenshot" />
+                    <img src={ph1} alt="ADHD support interface screenshot" />
                 </div>
                 <div className="condition_card_body">
                     <h5>ADHD</h5>
@@ -206,7 +210,7 @@ const ParentingStages = () => {
 
             <div className="condition_feature_card">
                 <div className="card_thumbnail_placeholder">
-                    <img src={ph} alt="Special needs care guidance framework" />
+                    <img src={ph2} alt="Special needs care guidance framework" />
                 </div>
                 <div className="condition_card_body">
                     <h5>Special Needs Care</h5>
@@ -217,7 +221,7 @@ const ParentingStages = () => {
 
             <div className="condition_feature_card">
                 <div className="card_thumbnail_placeholder">
-                    <img src={ph} alt="Learning difficulties assistance panel" />
+                    <img src={ph3} alt="Learning difficulties assistance panel" />
                 </div>
                 <div className="condition_card_body">
                     <h5>Learning Difficulties</h5>
